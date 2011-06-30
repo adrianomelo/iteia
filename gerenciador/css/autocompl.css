@@ -1,0 +1,35 @@
+#popautores {
+	display: none;
+	position: absolute;
+	top: 122px;
+	left: 12px;
+	border: 1px solid #118fc6;
+	z-index: 1000;
+}
+
+.ac_autores {
+	background: #d7f5ff;
+	color: #C00;
+}
+
+.ac_autores a {
+	text-decoration: none;
+	display: block;
+	padding:0 5px;
+}
+
+.ac_autores_sel {
+	background: #118fc6;
+	color: #FFFFFF;
+}
+
+.ac_autores a:hover {
+	background: #118fc6;
+	color: #FFFFFF;
+}
+
+.ac_autores_off {
+	border: 1px solid #e6594e;
+	background: #ffd8d5;
+	color: #FF0000;
+}

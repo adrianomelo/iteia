@@ -1,0 +1,27 @@
+<?php
+include('verificalogin.php');
+include_once(ConfigGerenciadorVO::getDirClassesRaiz()."util/Util.php");
+
+$cod = (int)$_GET['cod'];
+$acao = trim($_GET['acao']);
+$lista = trim($_GET['lista']);
+
+if ($acao == 'adicionar') {
+	if ($lista) {
+		$dados = explode('|', $lista);
+		$_SESSION['sessao_newsletter_usuarios_lista'][$dados[0]] = $dados[1];
+	}
+}
+
+if ($acao == 'remover') {
+	if (isset($_SESSION['sessao_newsletter_usuarios_lista'][$cod]))
+		unset($_SESSION['sessao_newsletter_usuarios_lista'][$cod]);
+}
+
+if (count($_SESSION['sessao_newsletter_usuarios_lista'])) {
+	echo "<span>Listas adicionadas:*</span>\n";
+	echo "<ul class=\"lista-remover\">";
+	foreach($_SESSION['sessao_newsletter_usuarios_lista'] as $key => $value)
+		echo "<li><span>".htmlentities($value)."</span> <a href=\"javascript:removerListaUsuario(".$key.");\" title=\"Remover\" class=\"remover\">Remover</a></li>\n";
+	echo "</ul>";
+}

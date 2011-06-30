@@ -1,0 +1,129 @@
+/* Tema para o Intereditor iteia */
+/* CodificaÃ§Ã£o: Billy Blay 		*/
+
+a { color:#0032aa; text-decoration:none;}
+a:hover { text-decoration:none;}
+body { background:url(img/topo/bg-topo.gif) left top repeat-x;}
+#content a {  text-decoration:none;}
+#content a:hover {  text-decoration:underline;}
+/* -------------------------------------- Menu */	
+#main-menu li { background:url(img/topo/menu-sep.gif) right 13px no-repeat;}
+html #main-menu li a { color:#fff; padding:5px 9px 10px;}
+#main-menu li a:hover { color:#F6FF00;}
+#main-menu li.active { background:url(img/topo/menu-aba-e.gif) left top no-repeat;}
+html #main-menu li.active a, html #main-menu li.active a:hover {
+	background:url(img/topo/menu-aba-d.gif) right top no-repeat;
+	color:#00308D;
+	padding:14px 9px 17px 7px;
+}
+/* -------------------------------------- #submenu */
+#submenu li { background:url(img/topo/submenu-sep.gif) right center no-repeat;}
+#submenu li a { color:#00308D;}
+#submenu .active a { background:url(img/topo/submenu-active.gif) left 7px no-repeat;}
+/* --------------------------------- Tables */
+th { background:#0032AB /*#92B9E8*/; color:#fff;}
+
+/* --------------------------------- login */
+#div-login {
+	margin:70px 0;
+	-padding:10px;
+	}
+#div-login span, #div-login .txt{ vertical-align:middle;}
+#div-login  form { margin-bottom:15px;}
+#div-login li { margin-bottom:5px;}
+/* --------------------------------- select */
+select { padding:2px}
+select option { padding:1px;}
+
+legend {
+	-position:relative;
+	-left:-7px;
+	}
+.box { -padding:10px!important;}
+/* --------------------------------- logo */
+html #header #logo {
+	background: url(img/topo/logo.gif) no-repeat scroll left top;
+	height:33px;
+	width:280px;
+	}
+
+#box-busca { background:#BEFAA1!important;}
+	
+html #header #ver { margin-left:58px; margin-top:10px;}
+html #header { height:130px;}
+/* =================================== icones atalhos */
+#shortcut .icon-img 	{ background:  url(img/icones/ico-imagem.gif) no-repeat;}
+#shortcut .icon-video 	{ background:  url(img/icones/ico-video.gif) no-repeat;}
+#shortcut .icon-audio 	{ background:  url(img/icones/ico-audio.gif) no-repeat;}
+#shortcut .icon-text 	{ background:  url(img/icones/ico-texto.gif) no-repeat;}
+#shortcut .icon-author 	{ background:  url(img/icones/ico-autor.gif) no-repeat;}
+#shortcut .icon-coll 	{ background:  url(img/icones/ico-colaborador.gif) no-repeat;}
+#shortcut .icon-news 	{ background:  url(img/icones/ico-noticia.gif) no-repeat;}
+#shortcut .icon-event 	{ background:  url(img/icones/ico-evento.gif) no-repeat;}
+#shortcut .icon-comm 	{ background:  url(img/icones/ico-comentario.gif) no-repeat;}
+#shortcut .icon-adv 	{ background:  url(img/icones/ico-anuncio.gif) no-repeat;}
+#shortcut .icon-group 	{ background:  url(img/icones/ico-grupo.gif) no-repeat;}
+
+/* =================================== icones miniatura */
+.texto 	{ background:url(img/icones/mini/ico-texto.gif) no-repeat;}
+.video 	{ background:url(img/icones/mini/ico-video.gif) no-repeat;}
+.audio 	{ background:url(img/icones/mini/ico-audio.gif) no-repeat;}
+.imagem { background:url(img/icones/mini/ico-imagem.gif) no-repeat;}
+.autor 	{ background:url(img/icones/mini/ico-autor.gif) no-repeat;}
+.grupo 	{ background:url(img/icones/mini/ico-usuarios.gif) no-repeat;}
+.agenda { background:url(img/icones/mini/ico-evento.gif) no-repeat;}
+.colaborador { background:url(img/icones/mini/ico-colaborador.gif) no-repeat;}
+
+/* =================================== icones inserir */
+.ico-texto 	{ background: url(img/icones/ico-texto.gif);}
+.ico-imagem { background: url(img/icones/ico-imagem.gif);}
+.ico-audio 	{ background: url(img/icones/ico-audio.gif);}
+.ico-video 	{ background: url(img/icones/ico-video.gif);}
+
+
+/* ajustes */
+/*.user-name, #user-body, #info, .titulo, .box, .box-completo { background:none!important;}*/
+/*
+html .titulo { 
+	border-bottom:2px solid #80BC63;
+	padding:5px 0;
+	font-size:14px}*/
+	
+html th {
+background:#dcdcdc;
+color:#000;
+}
+
+/*.box, .box-completo { padding:15px 0!important;}*/
+
+html #botoes { 
+background:#EBEBEB!important;
+border:1px solid #6B6B6B;
+padding:12px!important;
+}
+
+.bt-buscar, .bt-adicionar, .bt-remover, .bt-gravar, .bt, .bt-sim, .bt-nao,
+#botoes input, #botoes a {
+height:23px!important;
+position:relative;
+top:3px;
+}
+
+.bt-buscar, .bt-gravar, .bt, .bt-sim, .bt-nao,
+#botoes input, #botoes a {
+background:transparent url(img/bt-search.gif) no-repeat 0 0!important;}
+
+.bt-adicionar, .bt-remover { background:transparent url(img/bt-2.gif) no-repeat 0 0!important; }
+html a.bt { padding:5px 0;}
+
+html .nav strong {
+background:#80bc63;
+color:#FFFFFF;
+}
+
+html #op-comentario,
+html .descricao { 
+margin-left:0;
+}
+
+html #tipos-conteudo li { border:none; width:163px;}

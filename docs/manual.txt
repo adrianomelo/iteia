@@ -1,0 +1,70 @@
+Manual para instalação do iTEIA
+
+------------------------------------------------
+
+O iTeia dentro do apache tem que ser configurado para funcionar o endereço principal apontando para a pasta "portal", assim acessando http://localhost já seja aberto o portal/index.php.
+
+------------------------------------------------
+
+Em todo o código basta configurar os arquivos
+classes/vo/ConfigVO.php,
+classes/dao/ConexaoDB.php
+portal/classes/vo/ConfigPortalVO.php.
+
+------------------------------------------------
+
+As estruturas das tabelas estão no arquivo iteia_geral.sql.
+
+------------------------------------------------
+
+As seguintes regras abaixo devem ser colocadas no .htaccess ou no httpd.conf, na seção VirtualHost do endereço do iTeia, do apache:
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Direciona /gerenciador para a pasta do gerenciador
+RewriteRule ^\/gerenciador(.*)$ /gerenciador$1 [PT]
+Alias /gerenciador /home/iteia4/gerenciador/
+
+#Retira a barra final
+RewriteRule ^\/([a-z0-9_-]+)\/$ /$1 [R]
+
+#Se existir um arquivo .php direciona internamente para este. Ex: www.aa.com/aaa direciona para aaa.php se aaa.php existir
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.php -f
+RewriteRule ^\/([a-z0-9_-]+)\/?$ /$1.php [L]
+
+RewriteRule ^\/audios\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=4&novaurl=1&codformato=3&%{QUERY_STRING} [L]
+RewriteRule ^\/videos\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=4&novaurl=1&codformato=4&%{QUERY_STRING} [L]
+RewriteRule ^\/textos\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=4&novaurl=1&codformato=1&%{QUERY_STRING} [L]
+RewriteRule ^\/imagens\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=4&novaurl=1&codformato=2&%{QUERY_STRING} [L]
+RewriteRule ^\/jornal\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=4&novaurl=1&codformato=5&%{QUERY_STRING} [L]
+RewriteRule ^\/eventos\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=4&novaurl=1&codformato=6&%{QUERY_STRING} [L]
+RewriteRule ^\/autores\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=2&novaurl=1&%{QUERY_STRING} [L]
+RewriteRule ^\/colaboradores\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=1&novaurl=1&%{QUERY_STRING} [L]
+RewriteRule ^\/grupos\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&tipo=3&novaurl=1&%{QUERY_STRING} [L]
+
+#Direciona qualquer string para ver se tem conteudo em direcionar.php
+RewriteRule ^\/([a-z0-9_-]+)\/?$ /direcionar.php?endereco=$1&%{QUERY_STRING} [L]
+RewriteRule ^\/([a-z0-9_-]+)\/([0-9]+)\/?$ /direcionar.php?endereco=$1&pagina=$2&%{QUERY_STRING} [L]
+RewriteRule ^\/([a-z0-9_-]+)\/comp\/?$ /direcionar.php?endereco=$1&%{QUERY_STRING} [L]
+
+------------------------------------------------
+
+Requerimentos:
+
+PHP 4.2.x
+extensões do php: imagick, uploadprogressbar, fileinfo
+ImageMagick
+Apache 2.x com mod_rewrite
+MySQL 5.x
+
+------------------------------------------------
+
+Atenciosamente
+Kerchenn
+kerchenn@kmf.com.br
+kerchenn@gmail.com
+msn:kerchennelteque@hotmail.com
+skype:kerchenn
+

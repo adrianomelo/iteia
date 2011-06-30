@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+
+#conteudo a[href]:after	{content: " (" attr(href) ")";}
+a:link, a:visited	{color: #333; text-decoration: underline;}
+#busca-achix, #menu, #banners, #login, #descer, #subir, #rodape, #migalhas, #comentar, #comentarios .msg { display:none}

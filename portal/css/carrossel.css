@@ -1,0 +1,50 @@
+.jcarousel-skin-iteia .jcarousel-container {}
+.jcarousel-skin-iteia .jcarousel-container-horizontal { width: 845px; padding: 0 40px 10px;}
+.jcarousel-skin-iteia .jcarousel-clip-horizontal { width:  100%; height: 75px;}
+.jcarousel-skin-iteia .jcarousel-item { width: 86px; height: 68px;}
+.jcarousel-skin-iteia .jcarousel-item-horizontal { margin-right: 8px;}
+.jcarousel-skin-iteia .jcarousel-item-placeholder { background: #fff; color: #000;}
+
+.jcarousel-skin-iteia .jcarousel-prev-horizontal,
+.jcarousel-skin-iteia .jcarousel-next-horizontal {
+    position: absolute;
+    top: 1px;
+    width: 19px;
+    height: 65px;
+    cursor: pointer;
+    background: transparent url(../img/setas_carrossel.gif) no-repeat 0 0;
+
+}
+.jcarousel-skin-iteia .jcarousel-prev-horizontal { left: 5px; background-position:0 -65px;}
+
+.jcarousel-skin-iteia .jcarousel-next-horizontal {
+	right: 5px;
+}
+
+.jcarousel-skin-iteia .jcarousel-next-horizontal:hover {
+    background-position: -19px 0;
+}
+.jcarousel-skin-iteia .jcarousel-prev-horizontal:hover {
+    background-position: -19px -65px;
+}
+
+.jcarousel-skin-iteia .jcarousel-next-horizontal:active {
+    background-position: -38px 0;
+}
+.jcarousel-skin-iteia .jcarousel-prev-horizontal:active {
+    background-position: -38px -65px;
+}
+
+.jcarousel-skin-iteia .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-iteia .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-iteia .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -57px 0;
+}
+
+.jcarousel-skin-iteia .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-iteia .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-iteia .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -57px -65px;
+}
